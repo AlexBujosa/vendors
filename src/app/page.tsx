@@ -1,5 +1,4 @@
 import Vendor from "./components/vendors/vendors";
-import { Dialog } from "./components/dialog/dialog";
 export default function Home() {
   return (
     <main className="">
@@ -9,7 +8,6 @@ export default function Home() {
           <li className="ml-8">Play Game</li>
         </ul>
         <Vendor />
-        <Dialog />
       </div>
     </main>
   );

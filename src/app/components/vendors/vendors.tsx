@@ -1,11 +1,10 @@
 import Image from "next/image";
+import { Dialog } from "../dialog/dialog";
 
 export default function Vendor() {
   return (
     <div className="my-8 mx-8">
-      <button className="rounded-md border bg-cyan-500 px-4 h-8">
-        New Vendors
-      </button>
+      <Dialog />
       <div className="my-4 w-80">
         <div className="flex flex-row mb-4">
           <Image src="/vendors.png" width="35" height="35" alt="vendors-img" />
