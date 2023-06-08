@@ -10,6 +10,9 @@ export type DialogFooterProps = {
 export type DialogPortalProps = {
   children: React.ReactNode;
 };
+export type DialogTitleProps = {
+  children: React.ReactNode;
+};
 
 export interface DialogContentRef {
   onOpenDialog: () => void;

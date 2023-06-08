@@ -24,7 +24,7 @@ export const Dialog = () => {
   );
 };
 const DialogPortal = ({ children }: DialogProps.DialogPortalProps) => (
-  <div className="rounded-lg border-black border-2  min-[468px]:w-[430px] bg-white w-[96%] h-[250px] mx-auto my-auto p-4">
+  <div className="rounded-lg border-black border-2  min-[468px]:w-[430px] bg-white w-[96%] h-[280px] mx-auto my-auto p-4">
     {children}
   </div>
 );
@@ -42,6 +42,10 @@ const DialogHeader = ({
       x
     </p>
   </div>
+);
+
+const DialogTitle = ({ children }: DialogProps.DialogTitleProps) => (
+  <div className="my-4">{children}</div>
 );
 
 export const DialogContent = React.forwardRef<DialogProps.DialogContentRef, {}>(
@@ -70,6 +74,26 @@ export const DialogContent = React.forwardRef<DialogProps.DialogContentRef, {}>(
               <DialogHeader onCloseDialog={onCloseDialog}>
                 <h1 className="text-xl">Add New Vendors</h1>
               </DialogHeader>
+              <DialogTitle>
+                <p className="text-sm">
+                  If you add a vendors when you get started the game each
+                  vendors will provide you an image
+                </p>
+              </DialogTitle>
+              <div className="grid grid-cols-3 grid-rows-2 gap-4 py-4">
+                <div className="grid col-span-1">
+                  <label className="text-right" htmlFor="name">
+                    Name
+                  </label>
+                </div>
+                <div className="grid col-span-2">
+                  <input
+                    id="name"
+                    type="text"
+                    className="w-[100%] rounded-md border-black border-2"
+                  />
+                </div>
+              </div>
             </DialogPortal>
           </div>
         </div>
